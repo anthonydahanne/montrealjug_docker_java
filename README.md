@@ -1,2 +1,6 @@
-# montrealjug_docker_java
-Some of the code / demos shown during Thursday the 28th of January at the Montreal Java User Group
+Build :
+$ docker build -t id/hello_world_from_java .
+Run :
+$ docker run id/hello_world_from_java
+Publish :
+$ docker push id/hello_world_from_java
