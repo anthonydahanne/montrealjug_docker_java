@@ -1,10 +1,12 @@
-To build :
+To build (java & dockerfile) :
 
-$ mvn clean package
+$ mvn clean package docker:build
 
-To run :
+and push to the dockerhub registry :
 
-$ target/demo-0.0.1-SNAPSHOT.jar
+$ mvn clean package docker:build -DpushImage
 
 Dockerfile info : https://spring.io/guides/gs/spring-boot-docker/
+
+Docker Maven plugin : https://github.com/spotify/docker-maven-plugin
 
