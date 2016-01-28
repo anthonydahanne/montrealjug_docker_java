@@ -6,5 +6,39 @@
 </head>
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
+
+<h1>Docker info : </h1>
+<ul>
+    <li>Containers : <span th:text="${info.containers}"></span></li>
+    <li>Images : <span th:text="${info.images}"></span></li>
+    <li>Kernal version : <span th:text="${info.kernelVersion}"></span></li>
+    <li>Driver : <span th:text="${info.driver}"></span></li>
+    <li>Execution driver : <span th:text="${info.executionDriver}"></span></li>
+    <li>Memory total : <span th:text="${info.memTotal}"></span></li>
+    <li>Number of CPUs : <span th:text="${info.NCPU}"></span></li>
+    <li>OperatingSystem : <span th:text="${info.OperatingSystem}"></span></li>
+
+</ul>
+<!--<p th:text="${info}" />-->
+
+
+<h1>Running containers : </h1>
+<table>
+    <tr><th>id</th><th>image</th><th>command</th><th>created</th><th>status</th><th>ports</th><th>name</th></tr>
+    <tr th:each="container : ${containers}">
+        <td th:text="${container.id}"></td>
+        <td th:text="${container.image}"></td>
+        <td th:text="${container.command}"></td>
+        <td th:text="${container.created}"></td>
+        <td th:text="${container.status}"></td>
+        <td th:each="port : ${container.ports}">
+            <span th:text="${port.ip}"></span>:<span th:text="${port.publicPort}"></span> -> <span th:text="${port.privatePort}"></span>/<span th:text="${port.type}"></span>
+        </td>
+        <td th:each="name : ${container.names}">
+            <span th:text="${name}"></span>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
