@@ -1,6 +1,11 @@
 # Montreal JUG presentation : Docker & Java
 
 Some of the code / demos shown during Thursday the 28th of January at the Montreal Java User Group
+
+* [Link to the blog post](http://blog.dahanne.net/2016/01/31/docker-and-java-notes-from-the-montreal-jug-presentation/)
+* [slides](http://www.slideshare.net/anthonydahanne/docker-and-java-at-montral-jug)
+* [MontrealJUG event](http://www.meetup.com/montreal-jug/events/227440833/)
+
 The code lays in several branches, here are links to those branches :
 
 1. [Hello docker from Java](https://github.com/anthonydahanne/montrealjug_docker_java/tree/01_java_helloworld_dockerfile) : building a minimal java application into a  docker image
