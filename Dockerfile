@@ -1,4 +1,4 @@
-FROM java:8-jdk
+FROM openjdk:8-jdk-alpine
 MAINTAINER Anthony Dahanne <anthony.dahanne@gmail.com>
 RUN mkdir /app
 COPY App.java /app
