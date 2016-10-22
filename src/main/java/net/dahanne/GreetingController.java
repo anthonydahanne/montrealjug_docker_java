@@ -1,7 +1,6 @@
 package net.dahanne;
 
 import com.github.dockerjava.api.DockerClient;
-import com.github.dockerjava.api.command.InfoCmd;
 import com.github.dockerjava.api.model.Container;
 import com.github.dockerjava.api.model.Info;
 import com.github.dockerjava.core.DockerClientBuilder;
